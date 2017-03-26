@@ -1,0 +1,147 @@
+﻿<Window x:Class="COTtoMetastockConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COTtoMetastockConverter"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="COT to Metastock Converter" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Width="800"
+        Height="617">
+    <Grid Margin="0,0,0,0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400">
+            </ColumnDefinition>
+            <ColumnDefinition Width="200">
+            </ColumnDefinition>
+            <ColumnDefinition Width="200">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblIntro1" 
+    		Content="This tool extracts the S&amp;P 500 data from the COT Futures-Only report so it can be charted with the Metastock application." 
+    		Width="Auto" 
+    		Height="Auto"
+            Margin="23,23,23,400"     		
+            Grid.ColumnSpan="3"/>
+
+        <Label x:Name="lblIntro2" 
+    		Content="Net positions are calculated for the 3 main groups: large traders (non-commercials), commercials, and small speculators (non-reportables)." 
+    		Width="Auto" 
+    		Height="Auto"
+            Margin="23,46,23,377"     		
+            Grid.ColumnSpan="3"/>
+
+        <Label x:Name="lblIntro3" 
+    		Content="In addition, the spread between the net positions for the commercials versus the small speculators are also calculated." 
+    		Width="Auto" 
+    		Height="Auto"
+            Margin="23,68,23,354"     		
+            Grid.ColumnSpan="3"/>
+
+        <Label x:Name="lblIntro4" 
+    		Content="Column header names and ticker symbols can be modified in the &quot;configuration.txt&quot; file." 
+    		Width="Auto" 
+    		Height="Auto"
+    		Margin="23,92,23,337" 
+            Grid.ColumnSpan="3"/>
+
+        <Label 
+            x:Name="lblInstructions" 
+    		Content="Please supply a &quot;Traders in Financial Futures - Futures-Only&quot; Excel file from:" 
+    		Width="Auto" 
+    		Height="Auto"
+    		Margin="23,148,23,285" 
+            Grid.ColumnSpan="3" 
+            FontWeight="Bold"/>
+
+        <Label x:Name="lblCFTCLink" 
+    		Width="Auto" 
+    		Height="Auto"
+    		Margin="23,173,70,377" 
+    		MouseDown="lblCFTCLink_MouseDown" 
+            Grid.ColumnSpan="2">
+            <TextBlock 
+    			TextDecorations="Underline"  
+    			Height="28"
+    			Width="561"
+    			Cursor="Hand" 
+                Foreground="#FF0017FB">http://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalCompressed/index.htm
+            </TextBlock>
+        </Label>
+
+        <Separator 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="742" 
+            Height="23" 
+            Margin="23,122,0,0" 
+            Grid.ColumnSpan="3"/>
+
+        <TextBox x:Name="txtFilePath" 
+    		Text="" 
+    		TextWrapping="Wrap" 
+            IsReadOnly="True"
+    		HorizontalAlignment="Left"
+    		VerticalAlignment="Top"
+    		Width="572" 
+    		Height="30"
+            Padding="5"
+    		Margin="27,208,0,0" 
+            Grid.ColumnSpan="2" Background="#FFEAEAEA"/>
+
+        <TextBlock Margin="14,202,31,340" Grid.ColumnSpan="1" Grid.Column="2">
+            <Hyperlink TextDecorations="{x:Null}" x:Name="btnBrowse" Click="btnBrowse_Click">
+        		<Image 
+                    x:Name="btnBrowseImg" 
+                    Source="/Images/button_small.png" 
+                    Width="152" 
+                    Height="46"
+                    Margin="0" />
+            </Hyperlink>
+        </TextBlock>
+
+        <Label x:Name="lblDest" Content="Destination Files:" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               FontWeight="Bold"
+               Width="742" 
+               Height="34"
+               Margin="23,247,0,0" 
+               Grid.ColumnSpan="3"  />
+        <Label x:Name="lblOutputPath" 
+    		Content="" 
+    		Width="Auto" 
+    		Height="Auto"
+    		Margin="23,279,23,119"  
+            Grid.ColumnSpan="3"/>
+
+        <TextBlock 
+            Margin="243,469,41,19"
+            Grid.ColumnSpan="2">
+            <Hyperlink 
+                x:Name="btnConvert"
+                TextDecorations="{x:Null}" 
+                IsEnabled="False" 
+                Click="btnConvert_Click">
+            <Image x:Name="btnConvertImg"
+                   Width="318"
+                   Height="108"
+                   Margin="0"
+                   Source="/Images/button_disabled.png" />
+            </Hyperlink>
+        </TextBlock>
+        <fa:ImageAwesome
+            Name="faCog"
+            Icon="Cog"
+            Spin="True" 
+            SpinDuration="4"
+            Foreground="#7F999999" 
+            Margin="334,258,137,120"
+            Grid.ColumnSpan="2" />
+    </Grid>
+</Window>

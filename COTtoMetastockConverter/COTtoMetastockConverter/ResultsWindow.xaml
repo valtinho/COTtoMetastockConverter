@@ -1,0 +1,26 @@
+﻿<Window x:Class="COTtoMetastockConverter.ResultsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COTtoMetastockConverter"
+        mc:Ignorable="d"
+        Title="Results" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Width="800" 
+        Height="600">
+    <Grid>
+        <ScrollViewer 
+            Name="svResults" 
+            VerticalScrollBarVisibility="Auto" 
+            Margin="10">
+            <TextBox 
+                Name="tbResults" 
+                AcceptsReturn="True"
+                TextWrapping="Wrap"  />
+        </ScrollViewer>
+
+    </Grid>
+
+</Window>
