@@ -1,2 +1,2 @@
-# COTtoMetastockConverter
+# COT to Metastock Converter
 This tool extracts the S&amp;P 500 data from the COT Futures-Only report so it can be charted with the Metastock application. Net positions are calculated for the 3 main groups: large traders (non-commercials), commercials, and small speculators (non-reportables). In addition, the spread between the net positions for the commercials versus the small speculators are also calculated. Column header names and ticker symbols can be modified in the "configuration.txt" file.
