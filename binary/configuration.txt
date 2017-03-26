@@ -1,0 +1,37 @@
+﻿#***********************************************************************************
+#***CONFIGURATION FILE**************************************************************
+#***********************************************************************************
+#Lines that start with a pound sign (#) are comments
+#colons (:) separate variable names and values
+#semicolon (;) indicates the end of a line
+#***********************************************************************************
+#Column Header Names are defined with [variable name]:[string name from spreadsheet]
+#Neither the variable names, nor the values are case-sensitive
+#White-spaces are ignored
+#-----------------------------------------------------------------------------------
+reportDate:                report_date_as_mm_dd_yyyy;
+markeCode:                 cftc_contract_market_code;
+openInterest:              open_interest_all;
+largeTraderLongPositions:  noncomm_positions_long_all;
+largeTraderShortPositions: noncomm_positions_short_all;
+commercialLongPositions:   comm_positions_long_all;                           
+commercialShortPositions:  comm_positions_short_all;                          
+smallSpecLongPositions:    nonrept_positions_long_all;                           
+smallSpecShortPositions:   nonrept_positions_short_all;
+#***********************************************************************************
+#STOCK INDEX FUTURE, S&P 500 - INTERNATIONAL MONETARY MARKET
+#or S&P 500 STOCK INDEX - INTERNATIONAL MONETARY MARKET
+#CFTC_Contract_Market_Code
+#-----------------------------------------------------------------------------------
+spMarketCode: 138741;
+#***********************************************************************************
+#Output ticker symbols
+#-----------------------------------------------------------------------------------
+symbolcotCommercials:            ^COTSPXCOM;
+symbolcotLargeTraders:           ^COTSPXLG;
+symbolcotSmallSpeculators:       ^COTSPXSM;
+symbolcotSpread:                 ^COTSPXSpread;
+#***********************************************************************************
+#Output files Metastock headers
+#-----------------------------------------------------------------------------------
+metastockHeaders:          <NAME>,<TICKER>,<PER>,<DTYYYYMMDD>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>
