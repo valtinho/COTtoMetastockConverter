@@ -8,7 +8,7 @@ To download the latest COT report from the U.S. Commodity Futures Trading Commis
 Download the Excel version as a zip file. Extract its contents and supply the xls file to the COT to Metastock Converter Application.
 
 Screenshot of the COT to Metastock Converter Application:
-<img src="https://raw.githubusercontent.com/valtinho/COTtoMetastockConverter/master/COTtoMetastockConverter_Screenshot.png" alt="COT to Metastock Converted Application" />
+<img src="https://raw.githubusercontent.com/valtinho/COTtoMetastockConverter/master/COTtoMetastockConverter_Screenshot1.png" alt="COT to Metastock Converted Application" />
 
 I have chosen the legacy report (not disaggregated), because it is the one with the longest history. I also chose the futures-only report (without options data), because it is easier to interpret and make trading assumptions from. Please note, however, that neither COT, nor any other indicator, should not be used alone for trading decisions.
 
