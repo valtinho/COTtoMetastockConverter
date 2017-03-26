@@ -37,7 +37,7 @@
             Grid.ColumnSpan="3"/>
 
         <Label x:Name="lblIntro3" 
-    		Content="In addition, the spread between the net positions for the commercials versus the small speculators are also calculated." 
+    		Content="In addition, the spread between the net positions for the commercials versus the small speculators is calculated." 
     		Width="Auto" 
     		Height="Auto"
             Margin="23,68,23,354"     		
